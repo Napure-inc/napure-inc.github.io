@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 電話番号が自動的にリンク扱いにされるのを防ぐ。 -->
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- ファビコン画像の指定。 -->
+        <link rel="icon" href="favicon.ico" />
+
+        <!-- スマホでホームにサイトを追加したときに表示するアイコン画像の指定。 -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico" />
+
+        <!--SNS共有関係-->
+        <meta property="og:url" content="ページのURL" />
+        <meta property="og:title" content="ページのタイトル" />
+        <meta property="og:type" content="ページのタイプ" />
+        <meta property="og:description" content="記事の抜粋" />
+        <meta property="og:image" content="画像のURL" />
+        <!--絶対パスのURLで設定-->
+        <meta name="twitter:card" content="カード種類" />
+        <meta name="twitter:site" content="@Twitterユーザー名" />
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="fb:app_id" content="appIDを入力" />
+        <!--なければ削除-->
+
+        <!--【開発用】検索除外　本番公開したら必ず削除すること！-->
+        <meta name="robots" content="noindex,nofollow" />
+
+        <!--ブラウザのスタイルの削除-->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <!--ベースのスタイルの設置-->
+        <link rel="stylesheet" href="../css/base.css" />
+        <!--基本のスタイルの設置-->
+        <link rel="stylesheet" href="./css/contant-CN.css" />
+
+        <title>中国語対応│株式会社ナピュア Napure</title>
+        <meta name="description" content="ページの内容を表す文章" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+        <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css" />
+        <script src="../js/slider.js" defer></script>
+        <script src="../js/app.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <div class="header_title">
+                <h1 class="header_logo">
+                    <a href="../index.html"><img src="../img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </h1>
+                <nav class="main_nav">
+                    <ul class="main_nav-list">
+                        <li class="main_nav-item"><a href="../company/index.html">公司简介/日文</a></li>
+                        <li class="main_nav-item"><a href="../renovation/index.html">出租物业/日文</a></li>
+                        <li class="main_nav-item"><a href="../renovation/index.html">待售物业/日文</a></li>
+                        <li class="main_nav-item_hover dropdown">
+                            业务描述
+                            <ul class="dropdown-menu">
+                                <li><a href="../renovation/index.html">房地产买卖</a></li>
+                                <li><a href="../renovation/index.html">物业管理</a></li>
+                                <li><a href="../renovation/index.html">继承和遗产清理</a></li>
+                                <li><a href="../renovation/index.html">法律咨询・导言</a></li>
+                            </ul>
+                        </li>
+                        <li class="main_nav-item"><a href="../contact/index.html">日本語へ戻す</a></li>
+                    </ul>
+                    <ul class="main_nav-list_button">
+                        <li class="header_contact-tel">
+                            <a href="tel:06-6575-9446">
+                                <p>免费咨询</p>
+                                <p>tel <span>06-6575-9446</span></p>
+                                <p>接待时间 10:00～17:00 (不包括节假日)</p>
+                            </a>
+                        </li>
+                        <li class="header_contact-btn-box">
+                            <a href="./" class="btn">
+                                <img class="header_icon-b" src="../img/mail-icon.svg" alt="" />
+                                <img class="header_icon-w" src="../img/mail-icon-w.svg" alt="" />
+                                <p>免费咨询</p>
+                                <p>・询问</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ハンバーガーメニュー-->
+        <div class="hamburger_content">
+            <nav class="hamburger_nav">
+                <div class="hamburger_logo">
+                    <a href="../index.html"><img src="../img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </div>
+                <ul class="main_nav-list">
+                    <li class="main_nav-item"><a href="../company/index.html">公司简介/日文</a></li>
+                    <li class="main_nav-item"><a href="../renovation/index.html">出租物业清单</a></li>
+                    <li class="main_nav-item"><a href="../renovation/index.html">待售物业清单</a></li>
+                    <li class="main_nav-item_accordionwrap">
+                        <details id="js-accordion" class="accordion">
+                            <summary class="main_nav-item_accordion">
+                                業務内容<span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="accordion_box">
+                                <div class="accordion_item"><a href="../renovation/index.html">房地产买卖</a></div>
+                                <div class="accordion_item"><a href="../renovation/index.html">物业管理</a></div>
+                                <div class="accordion_item"><a href="../renovation/index.html">继承和遗产清理</a></div>
+                                <div class="accordion_item"><a href="../renovation/index.html">法律咨询・导言</a></div>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="main_nav-item"><a href="../contact/index.html">日本語へ戻す</a></li>
+                    <li class="header_contact-tel">
+                        <a href="tel:06-6575-9446">
+                            <p>免费咨询</p>
+                            <p>tel <span>06-6575-9446</span></p>
+                            <p>接待时间 10:00～17:00 (不包括节假日)</p>
+                        </a>
+                    </li>
+                    <li class="header_mail-box">
+                        <a href="../contact/index.html">
+                            <img class="header_icon" src="../img/mail-icon.svg" alt="" />
+                            <div class="header_contact-mail">
+                                <p>免费咨询</p>
+                                <p>・询问</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="hamburger_menu" name="button" onclick="navFunc()">
+                <span></span>
+            </button>
+        </div>
+        <!-- サブビジュアル -->
+        <div class="sub_visual-wrap">
+            <div class="sub_visual-box">
+                <img class="sub_visual-img" src="./img/subvs.jpg" alt="" />
+            </div>
+            <div class="sub_visual-text wrapper-s">
+                <h2 class="sub_visual-title">询问</h2>
+                <p class="sub_visual-body">contact</p>
+            </div>
+        </div>
+        <!-- パンくずリスト -->
+        <ol class="breadcrumb wrapper" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="../index.html">
+                    <span itemprop="name">首页</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+                <span itemprop="name">查询 / 输入</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+        <div class="contact-greeting">
+            <p class="contact-greeting_title">感谢您的咨询</p>
+            <p>无论内容如何，我们都很乐意与您联系</p>
+        </div>
+        <div class="contact-img-container">
+            <img src="../img/mail-black.png" class="moving-image" alt="" />
+        </div>
+        <div class="contact-maintext">
+            <p class="contact-maintext_title">我们将从即日起在<span>三个工作日内</span>给您答复</p>
+            <p>（如果在 3 个工作日内没有收到回复，请致电我们，因为可能是电子邮件传输错误。）</p>
+        </div>
+        <!-- お問い合わせフォーム -->
+        <div class="cp_form wrapper-s">
+            <form class="go-bottom" action="https://3mk.form.newt.so/v1/xSrCa3CbN" method="post" id="contact-form">
+                <h2>查询表格</h2>
+                <div class="cp_form-box">
+                    <span>名 称</span>
+                    <div class="cp_tx">
+                        <input id="name" name="name" type="text" placeholder="需 要" required />
+                        <label for="name">名 称</label>
+                    </div>
+                    <span>公司名称</span>
+                    <div class="cp_tx">
+                        <input id="companyname" name="companyname" placeholder="可 选" type="text" />
+                        <label for="companyname">公司名称</label>
+                    </div>
+                    <span>行业类别</span>
+                    <div class="cp_tx">
+                        <input id="industry" name="industry" placeholder="可 选" type="text" />
+                        <label for="industry">行业类别</label>
+                    </div>
+                    <span>电话号码</span>
+                    <div class="cp_tx">
+                        <input id="phone" name="phone" type="tel" placeholder="需 要" required />
+                        <label for="phone">电话号码</label>
+                    </div>
+                    <span>微信号</span>
+                    <div class="cp_tx">
+                        <input id="app_id" name="app_id" type="text" placeholder="需 要" required />
+                        <label for="app_id">微信号</label>
+                    </div>
+                    <span>E-MAIL</span>
+                    <div class="cp_tx">
+                        <input id="email" name="email" type="email" placeholder="需 要" required />
+                        <label for="email">E-MAIL</label>
+                    </div>
+                    <span>查询类型</span>
+                    <div class="cp_ipselect cp_sl01">
+                        <select name="inquiry" required>
+                            <option value="" hidden>请选择一项</option>
+                            <option value="不動産売買">房产买卖咨询</option>
+                            <option value="賃貸物件">出租物业咨询</option>
+                            <option value="法律相談">房地产法律咨询</option>
+                            <option value="企業間取引">企业对企业（B to B）查询</option>
+                            <option value="その他">其他</option>
+                        </select>
+                    </div>
+                    <div class="cp_tx">
+                        <textarea id="message" name="message" placeholder="需 要" required></textarea>
+                        <label for="message">正 文</label>
+                    </div>
+                    <div class="cp_ipfile">
+                        <label>
+                            <span class="button">附件</span>
+                            <input type="file" class="file_input" name="file" />
+                            <span class="file_text">附加文件</span>
+                        </label>
+                    </div>
+                    <div class="cp_input">
+                        <div class="cp_ipcheck">
+                            <p class="cp_title">隐私政策</p>
+                            <p class="cp_ipcheck-text">
+                                请阅读<a href="../privacypolicy/index.html" target="_blank"><span>隐私政策</span></a
+                                >，并在点击 “提交 ”按钮前勾选 “同意”
+                            </p>
+                            <input type="checkbox" id="c_ch1" required />
+                            <label for="c_ch1">※ 同 意</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp_btn">
+                    <div class="btn_cont">
+                        <button class="btn" type="submit"><span>提 交</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer wrapper">
+                <div class="footer-box_top">
+                    <h2><img class="footer-logo" src="../img/logo-black-name.svg" alt="" /></h2>
+                    <nav class="footer-box_text">
+                        <ul class="footer-box_body-top">
+                            <li><a href="../company/index.html">会社概要</a></li>
+                            <li><a href="../renovation/index.html">賃貸物件一覧</a></li>
+                            <li><a href="../renovation/index.html">分譲物件一覧</a></li>
+                            <li><a href="../contact/index.html">お問い合わせ</a></li>
+                        </ul>
+                        <ul class="footer-box_body-bottom">
+                            <li><a href="../renovation/index.html">相続・遺品整理</a></li>
+                            <li><a href="../renovation/index.html">不動産管理・運用</a></li>
+                            <li><a href="../renovation/index.html">法律相談・仲介</a></li>
+                            <li><a href="../contact-CN/index.html">中文咨询</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-box_bottom">
+                    <p>Copyright © Napure Co.,Ltd. All Rights Reserved.</p>
+                    <div class="footer_nav-item">
+                        <a href="../privacypolicy/index.html" target="_blank" rel="noopener noreferrer"
+                            >プライバシーポリシー</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

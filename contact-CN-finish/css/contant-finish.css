@@ -1,0 +1,323 @@
+.contact-button-wrap {
+    width: 100%;
+}
+
+.contact-button-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+}
+
+.contact-button-top {
+    color: #222F2F;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    display: inline;
+    border: 1px solid #222F2F;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.contact-button-contact {
+    color: #222F2F;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    display: inline;
+    border: 1px solid #222F2F;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.contact-button-top:hover {
+    background-color: rgba(195, 233, 201, 0.2);
+    transition: 0.5s;
+}
+
+.contact-button-contact:hover {
+    background-color: rgba(195, 233, 201, 0.2);
+    transition: 0.5s;
+}
+
+
+.contact-maintext {
+    width: 500px;
+    font-size: 14px;
+    margin: 50px auto;
+}
+
+.contact-maintext_title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-maintext_title span {
+    color: #b02f2f;
+}
+
+.contact-greeting {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-greeting_title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.contact-img-container {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    height: 25px;
+}
+
+@keyframes moveFade {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.moving-image {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+    animation: moveFade 3s linear infinite;
+}
+
+/*
+チェックマークのアニメーション
+    */
+.content-bg-check {
+    background-image: none;
+    margin-top: 50px;
+}
+
+.circle {
+    position: relative;
+    margin: auto;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    box-shadow: inset 0 0 0 2px #222F2F;
+
+    --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    /* easeInExpo */
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    /* easeOutExpo */
+
+    --circle-bg-color: #FFFEF6;
+    /* 背景色に合わせて変更してください */
+
+    &.animation {
+        animation: circle-filling-animation 0.3s ease 1.2s forwards;
+
+        .circle-cover-1::before {
+            animation: circle-draw-animation 0.4s var(--ease-in-expo) 0.4s forwards;
+        }
+
+        .circle-cover-2::before {
+            animation: circle-draw-animation 0.4s var(--ease-out-expo) 0.8s forwards;
+        }
+
+        .circle-illust {
+            animation: circle-check-animation 0.9s 1.4s forwards;
+            /* ぽよんぽよんする動き */
+            animation-timing-function: linear(0,
+                    1.32,
+                    0.87,
+                    1.05,
+                    0.98,
+                    1.01,
+                    1,
+                    1);
+        }
+    }
+}
+
+.circle-cover-1,
+.circle-cover-2 {
+    position: absolute;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+
+    &::before,
+    &::before {
+        position: absolute;
+        content: "";
+    }
+}
+
+.circle-cover-1 {
+    left: 50%;
+
+    &:before {
+        width: 100%;
+        height: 200%;
+        background: var(--circle-bg-color);
+        transform-origin: 0 25%;
+    }
+}
+
+.circle-cover-2::before {
+    left: -10%;
+    width: 110%;
+    height: 120%;
+    background: var(--circle-bg-color);
+    transform-origin: 100% 40%;
+}
+
+.circle-illust {
+    --size: 64px;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    color: var(--circle-bg-color);
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+    transform-origin: 50% 50%;
+    opacity: 0;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* 円を描くアニメーション */
+@keyframes circle-draw-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* 塗りのアニメーション */
+@keyframes circle-filling-animation {
+    0% {
+        box-shadow: inset 0 0 0 9px #222F2F;
+    }
+
+    100% {
+        box-shadow: inset 0 0 0 50px #222F2F;
+    }
+}
+
+/* チェックマークのアニメーション */
+
+@keyframes circle-check-animation {
+    0% {
+        transform: scale(0) rotate(-10deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1080px) {}
+
+@media screen and (max-width: 768px) {
+
+    .cp_ipcheck input[type='checkbox']+label:after,
+    .cp_ipradio input[type='radio']+label:after {
+        right: 150px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .contact-maintext {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contact-greeting_title {
+        font-size: 23px;
+    }
+
+    .contact-maintext_title {
+        font-size: 20px;
+    }
+
+    .cp_form h2 {
+        font-size: 20px;
+    }
+
+    .cp_form {
+        padding: 1em 2em;
+    }
+
+    .cp_ipcheck,
+    .cp_ipradio {
+        width: 100%;
+    }
+
+    .cp_ipcheck input[type='checkbox']+label:after,
+    .cp_ipradio input[type='radio']+label:after {
+        right: 135px;
+    }
+
+    .cp_ipcheck label,
+    .cp_ipradio label {
+        padding-right: 60px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contact-maintext_title {
+        font-size: 18px;
+    }
+
+    .cp_ipcheck label,
+    .cp_ipradio label {
+        padding-right: 80px;
+    }
+
+    .cp_ipcheck input[type='checkbox']+label:after,
+    .cp_ipradio input[type='radio']+label:after {
+        right: 125px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .cp_ipcheck input[type='checkbox']+label:after,
+    .cp_ipradio input[type='radio']+label:after {
+        right: 120px;
+    }
+
+    .contact-greeting_title {
+        font-size: 18px;
+    }
+
+    .contact-greeting p {
+        font-size: 14px;
+    }
+}

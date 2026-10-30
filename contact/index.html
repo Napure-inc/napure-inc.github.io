@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 電話番号が自動的にリンク扱いにされるのを防ぐ。 -->
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- ファビコン画像の指定。 -->
+        <link rel="icon" href="../favicon.ico" />
+
+        <!-- スマホでホームにサイトを追加したときに表示するアイコン画像の指定。 -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico" />
+
+        <!--SNS共有関係-->
+        <meta property="og:url" content="ページのURL" />
+        <meta property="og:title" content="ページのタイトル" />
+        <meta property="og:type" content="ページのタイプ" />
+        <meta property="og:description" content="記事の抜粋" />
+        <meta property="og:image" content="画像のURL" />
+        <!--絶対パスのURLで設定-->
+        <meta name="twitter:card" content="カード種類" />
+        <meta name="twitter:site" content="@Twitterユーザー名" />
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="fb:app_id" content="appIDを入力" />
+        <!--なければ削除-->
+
+        <!--【開発用】検索除外　本番公開したら必ず削除すること！-->
+        <meta name="robots" content="noindex,nofollow" />
+
+        <!--ブラウザのスタイルの削除-->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <!--ベースのスタイルの設置-->
+        <link rel="stylesheet" href="../css/base.css" />
+        <!--基本のスタイルの設置-->
+        <link rel="stylesheet" href="./css/contact.css" />
+
+        <title>お問い合わせ│株式会社ナピュア</title>
+        <meta name="description" content="ページの内容を表す文章" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+        <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css" />
+        <script src="../js/slider.js" defer></script>
+        <script src="../js/app.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <div class="header_title">
+                <h1 class="header_logo">
+                    <a href="../index.html"><img src="../img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </h1>
+                <nav class="main_nav">
+                    <ul class="main_nav-list">
+                        <li class="main_nav-item"><a href="../company/index.html">会社概要</a></li>
+                        <li class="main_nav-item"><a href="../renovation/index.html">賃貸物件一覧</a></li>
+                        <li class="main_nav-item"><a href="../renovation/index.html">分譲物件一覧</a></li>
+                        <li class="main_nav-item_hover dropdown">
+                            業務内容
+                            <ul class="dropdown-menu">
+                                <li><a href="../renovation/index.html">不動産売買</a></li>
+                                <li><a href="../renovation/index.html">不動産管理</a></li>
+                                <li><a href="../renovation/index.html">相続・遺品整理</a></li>
+                                <li><a href="../renovation/index.html">法律相談・仲介</a></li>
+                            </ul>
+                        </li>
+                        <li class="main_nav-item"><a href="../contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                    </ul>
+                    <ul class="main_nav-list_button">
+                        <li class="header_contact-tel">
+                            <a href="tel:06-6575-9446">
+                                <p>まずはお気軽に無料相談</p>
+                                <p>tel <span>06-6575-9446</span></p>
+                                <p>受付時間 10:00～17:00 (土日祝を除く)</p>
+                            </a>
+                        </li>
+                        <li class="header_contact-btn-box">
+                            <a href="./" class="btn">
+                                <img class="header_icon-b" src="../img/mail-icon.svg" alt="" />
+                                <img class="header_icon-w" src="../img/mail-icon-w.svg" alt="" />
+                                <p>無料相談・</p>
+                                <p>お問い合わせ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ハンバーガーメニュー-->
+        <div class="hamburger_content">
+            <nav class="hamburger_nav">
+                <div class="hamburger_logo">
+                    <a href="../index.html"><img src="../img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </div>
+                <ul class="main_nav-list">
+                    <li class="main_nav-item"><a href="../company/index.html">会社概要</a></li>
+                    <li class="main_nav-item"><a href="../renovation/index.html">賃貸物件一覧</a></li>
+                    <li class="main_nav-item"><a href="../renovation/index.html">分譲物件一覧</a></li>
+                    <li class="main_nav-item_accordionwrap">
+                        <details id="js-accordion" class="accordion">
+                            <summary class="main_nav-item_accordion">
+                                業務内容<span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="accordion_box">
+                                <div class="accordion_item"><a href="../renovation/index.html">不動産売買</a></div>
+                                <div class="accordion_item"><a href="../renovation/index.html">不動産管理</a></div>
+                                <div class="accordion_item"><a href="../renovation/index.html">相続・遺品整理</a></div>
+                                <div class="accordion_item"><a href="../renovation/index.html">法律相談・仲介</a></div>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="main_nav-item"><a href="../contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                    <li class="header_contact-tel">
+                        <a href="tel:06-6575-9446">
+                            <p>まずはお気軽に無料相談</p>
+                            <p>tel <span>06-6575-9446</span></p>
+                            <p>受付時間 10:00～17:00 (土日祝を除く)</p>
+                        </a>
+                    </li>
+                    <li class="header_mail-box">
+                        <a href="./">
+                            <img class="header_icon" src="../img/mail-icon.svg" alt="" />
+                            <div class="header_contact-mail">
+                                <p>無料相談・</p>
+                                <p>お問い合わせ</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="hamburger_menu" name="button" onclick="navFunc()">
+                <span></span>
+            </button>
+        </div>
+        <!-- サブビジュアル -->
+        <div class="sub_visual-wrap">
+            <div class="sub_visual-box">
+                <img class="sub_visual-img" src="./img/subvs.jpg" alt="" />
+            </div>
+            <div class="sub_visual-text wrapper-s">
+                <h2 class="sub_visual-title">お問い合わせ</h2>
+                <p class="sub_visual-body">contact</p>
+            </div>
+        </div>
+        <!-- パンくずリスト -->
+        <ol class="breadcrumb wrapper" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="../index.html">
+                    <span itemprop="name">ホーム</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+                <span itemprop="name">お問い合わせ / 入力</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+        <!-- ご対応について -->
+        <div class="contact-greeting">
+            <p class="contact-greeting_title">お問い合わせいただき<br />誠にありがとうございます</p>
+            <p>内容に関わらず、ご連絡いただけますと幸いです。</p>
+        </div>
+        <div class="contact-img-container">
+            <img src="../img/mail-black.png" class="moving-image" alt="" />
+        </div>
+        <div class="contact-maintext">
+            <p class="contact-maintext_title">本日より<span>３営業日以内</span>にご返信致します</p>
+            <p>
+                （３営業日以内に返信がない場合はメール送信エラーの可能性もございますので弊社までお電話でお問い合わせください）
+            </p>
+        </div>
+        <!-- 無料査定導線 -->
+        <div class="appraisal-link wrapper-s">
+            <a href="/service/appraisal/index.html" class="appraisal-link-box">
+                <div class="appraisal-link-text">
+                    <p class="appraisal-link-sub">売却・査定をご検討の方へ</p>
+                    <p class="appraisal-link-main">無料査定サイトはこちら</p>
+                </div>
+                <span class="appraisal-link-arrow">→</span>
+            </a>
+        </div>
+        <!-- お問い合わせフォーム -->
+        <div class="cp_form wrapper-s">
+            <form
+                class="go-bottom"
+                action="https://ssgform.com/s/fIHcDfZJHaDf"
+                method="post"
+                id="contact-form"
+                enctype="multipart/form-data">
+                <h2>お問い合わせフォーム</h2>
+
+                <div class="cp_form-box">
+                    <div class="cp_field">
+                        <p class="cp_field-title">氏 名 <span class="form_required">必 須</span></p>
+                        <div class="cp_tx">
+                            <input id="name" name="name" type="text" placeholder=" " required />
+                            <label for="name">氏 名</label>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">会社名 <span class="form_optional">任 意</span></p>
+                        <div class="cp_tx">
+                            <input id="companyname" name="companyname" type="text" placeholder=" " />
+                            <label for="companyname">会社名</label>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">業 種 <span class="form_optional">任 意</span></p>
+                        <div class="cp_tx">
+                            <input id="industry" name="industry" type="text" placeholder=" " />
+                            <label for="industry">業 種</label>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">電話番号 <span class="form_required">必 須</span></p>
+                        <div class="cp_tx">
+                            <input id="tel" name="tel" type="tel" placeholder=" " required />
+                            <label for="tel">電話番号</label>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">メールアドレス <span class="form_required">必 須</span></p>
+                        <div class="cp_tx">
+                            <input id="email" name="email" type="email" placeholder=" " required />
+                            <label for="email">メールアドレス</label>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">お問い合わせ内容 <span class="form_required">必 須</span></p>
+                        <div class="cp_ipselect cp_sl01">
+                            <select name="inquiry" required>
+                                <option value="" hidden>※ お選びください</option>
+                                <option value="不動産売買">不動産売買に関するご相談</option>
+                                <option value="賃貸物件">賃貸物件に関するご相談</option>
+                                <option value="法律相談">不動産にまつわる法律相談</option>
+                                <option value="企業間取引">企業間取引(B to B)のお問い合わせ</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">本 文 <span class="form_required">必 須</span></p>
+                        <div class="cp_tx">
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
+                            <label for="message">本 文</label>
+                        </div>
+                    </div>
+
+                    <div class="cp_field">
+                        <p class="cp_field-title">添付ファイル <span class="form_optional">任 意</span></p>
+                        <div class="cp_ipfile">
+                            <label for="file-upload">
+                                <span class="button">参照</span>
+                                <input id="file-upload" type="file" class="file_input" name="file" />
+                                <span class="file_text">添付ファイル</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cp_input">
+                        <div class="cp_ipcheck">
+                            <p class="cp_title">プライバシーポリシー</p>
+                            <p class="cp_ipcheck-text">
+                                <a href="../privacypolicy/index.html" target="_blank">
+                                    <span>プライバシーポリシー</span>
+                                </a>
+                                をご確認の上、「同意する」にチェックしてから「送信」ボタンをおしてください。
+                            </p>
+                            <input type="checkbox" id="checkbox" required />
+                            <label for="checkbox">※ 同意する</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cp_btn">
+                    <div class="btn_cont">
+                        <button class="btn" type="submit"><span>送 信</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer wrapper">
+                <div class="footer-box_top">
+                    <h2><img class="footer-logo" src="../img/logo-black-name.svg" alt="" /></h2>
+                    <nav class="footer-box_text">
+                        <ul class="footer-box_body-top">
+                            <li><a href="../company/index.html">会社概要</a></li>
+                            <li><a href="../renovation/index.html">賃貸物件一覧</a></li>
+                            <li><a href="../renovation/index.html">分譲物件一覧</a></li>
+                            <li><a href="../contact/index.html">お問い合わせ</a></li>
+                        </ul>
+                        <ul class="footer-box_body-bottom">
+                            <li><a href="../renovation/index.html">相続・遺品整理</a></li>
+                            <li><a href="../renovation/index.html">不動産管理・運用</a></li>
+                            <li><a href="../renovation/index.html">法律相談・仲介</a></li>
+                            <li><a href="../contact-CN/index.html">中文咨询</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-box_bottom">
+                    <p>Copyright © Napure Co.,Ltd. All Rights Reserved.</p>
+                    <div class="footer_nav-item">
+                        <a href="../privacypolicy/index.html" target="_blank" rel="noopener noreferrer"
+                            >プライバシーポリシー</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
