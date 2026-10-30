@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 電話番号が自動的にリンク扱いにされるのを防ぐ。 -->
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- ファビコン画像の指定。 -->
+        <link rel="icon" href="../favicon.ico" />
+
+        <!-- スマホでホームにサイトを追加したときに表示するアイコン画像の指定。 -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico" />
+
+        <!--SNS共有関係-->
+        <meta property="og:url" content="ページのURL" />
+        <meta property="og:title" content="ページのタイトル" />
+        <meta property="og:type" content="ページのタイプ" />
+        <meta property="og:description" content="記事の抜粋" />
+        <meta property="og:image" content="画像のURL" />
+        <!--絶対パスのURLで設定-->
+        <meta name="twitter:card" content="カード種類" />
+        <meta name="twitter:site" content="@Twitterユーザー名" />
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="fb:app_id" content="appIDを入力" />
+        <!--なければ削除-->
+
+        <!--【開発用】検索除外　本番公開したら必ず削除すること！-->
+        <meta name="robots" content="noindex,nofollow" />
+
+        <!--ブラウザのスタイルの削除-->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <!--ベースのスタイルの設置-->
+        <link rel="stylesheet" href="../css/base.css" />
+        <!--基本のスタイルの設置-->
+        <link rel="stylesheet" href="./css/renovation.css" />
+
+        <title>リニューアル中│株式会社ナピュア</title>
+        <meta name="description" content="ページの内容を表す文章" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+        <script src="../js/slider.js" defer></script>
+        <script src="../js/app.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1de2d5bc2.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <div class="header_title">
+                <h1 class="header_logo">
+                    <a href="../"><img src="../img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </h1>
+                <nav class="main_nav">
+                    <ul class="main_nav-list">
+                        <li class="main_nav-item"><a href="../company/index.html">会社概要</a></li>
+                        <li class="main_nav-item"><a href="./">賃貸物件一覧</a></li>
+                        <li class="main_nav-item"><a href="./">分譲物件一覧</a></li>
+                        <li class="main_nav-item_hover dropdown">
+                            業務内容
+                            <ul class="dropdown-menu">
+                                <li><a href="./">不動産売買</a></li>
+                                <li><a href="./">不動産管理</a></li>
+                                <li><a href="./">相続・遺品整理</a></li>
+                                <li><a href="./">法律相談・仲介</a></li>
+                            </ul>
+                        </li>
+                        <li class="main_nav-item"><a href="../contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                    </ul>
+                    <ul class="main_nav-list_button">
+                        <li class="header_contact-tel">
+                            <a href="tel:06-6575-9446">
+                                <p>まずはお気軽に無料相談</p>
+                                <p>tel <span>06-6575-9446</span></p>
+                                <p>受付時間 10:00～17:00 (土日祝を除く)</p>
+                            </a>
+                        </li>
+                        <li class="header_contact-btn-box">
+                            <a href="../contact/index.html" class="btn">
+                                <img class="header_icon-b" src="../img/mail-icon.svg" alt="" />
+                                <img class="header_icon-w" src="../img/mail-icon-w.svg" alt="" />
+                                <p>無料相談・</p>
+                                <p>お問い合わせ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ハンバーガーメニュー-->
+        <div class="hamburger_content">
+            <nav class="hamburger_nav">
+                <div class="hamburger_logo">
+                    <a href="../"><img src="../img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </div>
+                <ul class="main_nav-list">
+                    <li class="main_nav-item"><a href="../company/index.html">会社概要</a></li>
+                    <li class="main_nav-item"><a href="./">賃貸物件一覧</a></li>
+                    <li class="main_nav-item"><a href="./">分譲物件一覧</a></li>
+                    <li class="main_nav-item_accordionwrap">
+                        <details id="js-accordion" class="accordion">
+                            <summary class="main_nav-item_accordion">
+                                業務内容<span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="accordion_box">
+                                <div class="accordion_item"><a href="./">不動産売買</a></div>
+                                <div class="accordion_item"><a href="./">不動産管理</a></div>
+                                <div class="accordion_item"><a href="./">相続・遺品整理</a></div>
+                                <div class="accordion_item"><a href="./">法律相談・仲介</a></div>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="main_nav-item"><a href="../contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                    <li class="header_contact-tel">
+                        <a href="tel:06-6575-9446">
+                            <p>まずはお気軽に無料相談</p>
+                            <p>tel <span>06-6575-9446</span></p>
+                            <p>受付時間 10:00～17:00 (土日祝を除く)</p>
+                        </a>
+                    </li>
+                    <li class="header_mail-box">
+                        <a href="../contact/index.html">
+                            <img class="header_icon" src="../img/mail-icon.svg" alt="" />
+                            <div class="header_contact-mail">
+                                <p>無料相談・</p>
+                                <p>お問い合わせ</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="hamburger_menu" name="button" onclick="navFunc()">
+                <span></span>
+            </button>
+        </div>
+        <!-- メインビジュアル -->
+        <div class="renovation-box">
+            <div class="renovation-box-dark">
+                <img src="./img/background.jpg" alt="" />
+                <img class="renovation-logo" src="../img/logo-white.svg" alt="" />
+                <span>リニューアル中</span>
+                <p>
+                    ただいま、より使いやすく<br />
+                    快適にご利用頂けるように改装中です。<br />
+                    ご迷惑をおかけしますが、しばらくお待ちくださいませ。
+                </p>
+                <div class="renovation-button-box">
+                    <a href="../index.html" class="renovation-button-top">TOPへ戻る</a>
+                    <a href="../contact/index.html" class="renovation-button-contact">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer wrapper">
+                <div class="footer-box_top">
+                    <h2><img class="footer-logo" src="../img/logo-black-name.svg" alt="" /></h2>
+                    <nav class="footer-box_text">
+                        <ul class="footer-box_body-top">
+                            <li><a href="../company/index.html">会社概要</a></li>
+                            <li><a href="./">賃貸物件一覧</a></li>
+                            <li><a href="./">分譲物件一覧</a></li>
+                            <li><a href="../contact/index.html">お問い合わせ</a></li>
+                        </ul>
+                        <ul class="footer-box_body-bottom">
+                            <li><a href="./">相続・遺品整理</a></li>
+                            <li><a href="./">不動産管理・運用</a></li>
+                            <li><a href="./">法律相談・仲介</a></li>
+                            <li><a href="../contact-CN/index.html">中文咨询</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-box_bottom">
+                    <p>Copyright © Napure Co.,Ltd. All Rights Reserved.</p>
+                    <div class="footer_nav-item">
+                        <a href="../privacypolicy/index.html" target="_blank" rel="noopener noreferrer"
+                            >プライバシーポリシー</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

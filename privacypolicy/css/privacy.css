@@ -1,0 +1,149 @@
+.privacy-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.privacy-page-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.privacy-button_wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+/* ボタン本体 */
+.privacy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 48px;
+    padding: 0 28px;
+
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+
+    color: #247879;
+    background: #ffffff;
+
+    border: 1px solid #247879;
+    border-radius: 999px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* ホバー */
+.privacy-button:hover {
+    background: #247879;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(36, 120, 121, 0.2);
+}
+
+/* クリック */
+.privacy-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(36, 120, 121, 0.15);
+}
+
+.privacy_wrap h1 {
+    font-size: 32px;
+    padding: 0 0 20px 0;
+}
+
+.privacy_wrap h2 {
+    margin: 50px 0 40px 0;
+    padding: 15px 0 15px 20px;
+    font-size: 28px;
+    border-left: 5px solid #5db5bd;
+}
+
+.privacy_wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 50px;
+    margin-top: 100px;
+    background-image: url(../img/form_back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.privacy_text ol {
+    margin: 20px 0 0 50px;
+}
+
+.privacy_text ol li {
+    position: relative;
+    list-style: outside decimal;
+    padding: 0 0 0 5px;
+}
+
+.privacy_text ol li::marker {
+    font-size: 130%;
+    font-weight: 700;
+    color: #5db5bd;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+.privacy-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .privacy-page {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .privacy_wrap {
+        padding: 20px 20px;
+        margin-top: 60px;
+        border-radius: 0;
+    }
+
+    .privacy_wrap h1 {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .privacy_wrap h2 {
+        font-size: 16px;
+        padding: 10px 0px 20px 10px;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .privacy_text {
+        font-size: 12px;
+    }
+
+    .privacy-button_wrap {
+        margin-top: 30px;
+    }
+
+    .privacy-button {
+        width: 100%;
+        max-width: 260px;
+        height: 44px;
+        font-size: 14px;
+    }
+}
