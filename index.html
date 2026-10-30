@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 電話番号が自動的にリンク扱いにされるのを防ぐ。 -->
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- ファビコン画像の指定。 -->
+        <link rel="icon" href="favicon.ico" />
+
+        <!-- スマホでホームにサイトを追加したときに表示するアイコン画像の指定。 -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico" />
+
+        <!--SNS共有関係-->
+        <meta property="og:url" content="ページのURL" />
+        <meta property="og:title" content="ページのタイトル" />
+        <meta property="og:type" content="ページのタイプ" />
+        <meta property="og:description" content="記事の抜粋" />
+        <meta property="og:image" content="画像のURL" />
+        <!--絶対パスのURLで設定-->
+        <meta name="twitter:card" content="カード種類" />
+        <meta name="twitter:site" content="@Twitterユーザー名" />
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="fb:app_id" content="appIDを入力" />
+        <!--なければ削除-->
+
+        <!--【開発用】検索除外　本番公開したら必ず削除すること！-->
+        <meta name="robots" content="noindex,nofollow" />
+
+        <!--ブラウザのスタイルの削除-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--ベースのスタイルの設置-->
+        <link rel="stylesheet" href="css/base.css" />
+        <!--基本のスタイルの設置-->
+        <link rel="stylesheet" href="css/top.css" />
+
+        <title>株式会社ナピュア Napure</title>
+        <meta name="description" content="ページの内容を表す文章" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+        <script src="./js/slider.js" defer></script>
+        <script src="./js/app.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1de2d5bc2.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- ローディング-->
+        <div id="loader" class="loader">
+            <div id="loading_logo" class="loading_logo">
+                <img src="./img/napure-logo-anime-s.gif" alt="" />
+            </div>
+        </div>
+        <!-- header -->
+        <header>
+            <div class="header_title">
+                <h1 class="header_logo">
+                    <a href="./"><img src="./img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </h1>
+                <nav class="main_nav">
+                    <ul class="main_nav-list">
+                        <li class="main_nav-item"><a href="./company/index.html">会社概要</a></li>
+                        <li class="main_nav-item"><a href="./renovation/index.html">賃貸物件一覧</a></li>
+                        <li class="main_nav-item"><a href="./renovation/index.html">分譲物件一覧</a></li>
+                        <li class="main_nav-item_hover dropdown">
+                            業務内容
+                            <ul class="dropdown-menu">
+                                <li><a href="./renovation/index.html">不動産売買</a></li>
+                                <li><a href="./renovation/index.html">不動産管理</a></li>
+                                <li><a href="./renovation/index.html">相続・遺品整理</a></li>
+                                <li><a href="./renovation/index.html">法律相談・仲介</a></li>
+                            </ul>
+                        </li>
+                        <li class="main_nav-item"><a href="./contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                    </ul>
+                    <ul class="main_nav-list_button">
+                        <li class="header_contact-tel">
+                            <a href="tel:06-6575-9446">
+                                <p>まずはお気軽に無料相談</p>
+                                <p>tel <span>06-6575-9446</span></p>
+                                <p>受付時間 10:00～17:00 (土日祝を除く)</p>
+                            </a>
+                        </li>
+                        <li class="header_contact-btn-box">
+                            <a href="./contact/index.html" class="btn">
+                                <img class="header_icon-b" src="./img/mail-icon.svg" alt="" />
+                                <img class="header_icon-w" src="./img/mail-icon-w.svg" alt="" />
+                                <p>無料相談・</p>
+                                <p>お問い合わせ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ハンバーガーメニュー-->
+        <div class="hamburger_content">
+            <nav class="hamburger_nav">
+                <div class="hamburger_logo">
+                    <a href="./"><img src="./img/logo-black-name.svg" alt="株式会社ナピュア ロゴ" /></a>
+                </div>
+                <ul class="main_nav-list">
+                    <li class="main_nav-item"><a href="./company/index.html">会社概要</a></li>
+                    <li class="main_nav-item"><a href="./renovation/index.html">賃貸物件一覧</a></li>
+                    <li class="main_nav-item"><a href="./renovation/index.html">分譲物件一覧</a></li>
+                    <li class="main_nav-item_accordionwrap">
+                        <details id="js-accordion" class="accordion">
+                            <summary class="main_nav-item_accordion">
+                                業務内容<span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="accordion_box">
+                                <div class="accordion_item"><a href="./renovation/index.html">不動産売買</a></div>
+                                <div class="accordion_item"><a href="./renovation/index.html">不動産管理</a></div>
+                                <div class="accordion_item"><a href="./renovation/index.html">相続・遺品整理</a></div>
+                                <div class="accordion_item"><a href="./renovation/index.html">法律相談・仲介</a></div>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="main_nav-item"><a href="./contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                    <li class="header_contact-tel">
+                        <a href="tel:06-6575-9446">
+                            <p>まずはお気軽に無料相談</p>
+                            <p>tel <span>06-6575-9446</span></p>
+                            <p>受付時間 10:00～17:00 (土日祝を除く)</p>
+                        </a>
+                    </li>
+                    <li class="header_mail-box">
+                        <a href="./contact/index.html">
+                            <img class="header_icon" src="./img/mail-icon.svg" alt="" />
+                            <div class="header_contact-mail">
+                                <p>無料相談・</p>
+                                <p>お問い合わせ</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="hamburger_menu" name="button" onclick="navFunc()">
+                <span></span>
+            </button>
+        </div>
+        <!-- メインビジュアル -->
+        <div class="main_visual">
+            <div class="main_visual-text">
+                <img class="main_visual-logo" src="./img/logo-black-name.svg" alt="" />
+                <div class="mv-text_title">
+                    <p class="mv-text_title-top">問題に寄り添い<span>信頼</span>できる</p>
+                    <p class="mv-text_title-bottom">不動産エキスパート集団</p>
+                    <!-- <p class="mv-text_body">
+                お客様のニーズに寄り添い、最適な不動産ソリューションを提供します。法律・売買に精通した有資格者（宅地建物取引士）が、一人ひとりに合わせたメリットを見つけ出し、安心・納得の取引をサポート。理想の一歩を共に。
+            </p> -->
+                </div>
+            </div>
+            <div class="main_imgbox">
+                <div id="main_visual-slider">
+                    <div class="main_visual-item" id="slide1">
+                        <img src="./img/mv03.jpg" alt="" />
+                    </div>
+                    <div class="main_visual-item" id="slide2">
+                        <img src="./img/mv01.jpg" alt="" />
+                    </div>
+                    <div class="main_visual-item" id="slide3">
+                        <img src="./img/mv02.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="main_visual-scroll" id="type">
+                    <p>Scroll</p>
+                </div>
+            </div>
+            <div class="main_visual-back">
+                <div class="main_visual-back_left"></div>
+                <div class="main_visual-back_right"></div>
+            </div>
+        </div>
+
+        <!-- ジャンプボタン -->
+        <a href="#" id="page_top">
+            <p class="button-top">TOP</p>
+        </a>
+        <!-- 代表挨拶 -->
+        <div class="president-wrap">
+            <div class="president wrapper">
+                <img class="president_logo" src="./img/logo-bar.png" alt="" />
+                <div class="presidentbox">
+                    <div class="presidentbox_left">
+                        <img src="./img/sampleimage.jpg" alt="" />
+                    </div>
+                    <div class="presidentbox_right">
+                        <h2>代表挨拶</h2>
+                        <p>
+                            私たちは、不動産売買、土地運用、賃貸物件の管理を通じて、お客様の暮らしやビジネスに最適なソリューションをご提供します。経験豊富な有資格者（宅地建物取引士）と専門スタッフが、抱えるお悩みに丁寧に寄り添い、理想を実現するために最適なご提案をいたします。<br />
+                            多様化するニーズに応えるため、私たちは市場動向を正確に把握し、一人ひとりに合わせたオーダーメイドのサービスを展開。迅速な対応と信頼を基盤に、お客様が抱く「理想の未来」を形にします。<br />
+                            「安心」「信頼」「満足」をお届けすることを使命とし、住まいと土地に新たな価値を創造します。まずはお気軽にご相談ください。
+                        </p>
+                        <div class="presidentbox_name">
+                            <span>代表取締役</span>
+                            <img class="presidentbox_name-img" src="./img/name.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="president-back" src="./img/mv_back.jpg" alt="" />
+        </div>
+        <!-- 取扱物件 -->
+        <div class="block-title-main">
+            <h2>取扱物件</h2>
+            <div class="img-wrap">
+                <img src="./img/listing.png" alt="" />
+            </div>
+        </div>
+        <div class="listing_wrap">
+            <!-- 左側 -->
+            <div class="anim-box slidein-left" id="slide-in-left">
+                <div class="listing_box-left">
+                    <div class="listing_box-left_imgbox">
+                        <img class="left_imgbox01" src="./img/room01.png" alt="" />
+                        <img class="left_imgbox02" src="./img/room02.png" alt="" />
+                        <img class="left_imgbox03" src="./img/room03.png" alt="" />
+                    </div>
+                    <div class="listing_box-left_text">
+                        <div class="listing_box-left_title">
+                            <img src="./img/cil_room.svg" alt="" />
+                            <h3><span>賃貸</span>物件一覧</h3>
+                        </div>
+                        <p>
+                            間取りや立地、設備の充実度など、多彩な条件に合わせた物件を豊富にご用意。シングルライフを楽しみたい方から、家族で快適に暮らしたい方まで、あらゆるライフスタイルに対応した物件をご紹介します。<br />
+                            掲載物件以外にも非公開情報をご提案できる場合があります。理想の物件探しを全力でサポートしますので、ぜひお気軽にお問い合わせください。
+                        </p>
+                        <div class="link_box_button">
+                            <a href="./renovation/index.html" class="left_button">賃貸物件リスト</a>
+                            <a href="./contact/index.html" class="right_button">条件のご相談</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右側 -->
+            <div class="anim-box slidein-right" id="slide-in-right">
+                <div class="listing_box-right">
+                    <div class="listing_box-right_text">
+                        <div class="listing_box-right_title">
+                            <img src="./img/house-outline.svg" alt="" />
+                            <h3><span>分譲</span>物件一覧</h3>
+                        </div>
+                        <p>
+                            理想の住まいを叶える分譲物件を多数ご紹介。高いデザイン性、快適な住環境、そして長く安心して暮らせる品質を兼ね備えた物件を取り揃えています。<br />
+                            都市の利便性を重視した立地から自然に囲まれた癒しのエリアまで、ライフスタイルに対応した物件をご紹介し、お客様の「これからの暮らし」に合致した一軒を見つけるお手伝いをいたします。
+                        </p>
+                        <div class="link_box_button">
+                            <a href="./renovation/index.html" class="left_button">分譲物件リスト</a>
+                            <a href="./contact/index.html" class="right_button">条件のご相談</a>
+                        </div>
+                    </div>
+                    <div class="listing_box-right_imgbox">
+                        <img class="right_imgbox01" src="./img/house01.png" alt="" />
+                        <img class="right_imgbox02" src="./img/house02.png" alt="" />
+                        <img class="right_imgbox03" src="./img/house03.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 私たちについて -->
+        <div class="aboutus_wrap">
+            <div class="block-title-main">
+                <h2>私たちについて</h2>
+                <div class="img-wrap">
+                    <img src="./img/aboutus.png" alt="" />
+                </div>
+            </div>
+            <div class="aboutus_box wrapper">
+                <div class="aboutus_box-left">
+                    <img class="aboutus_box-img" src="./img/pen.jpg" alt="" />
+                </div>
+                <div class="aboutus_box-right">
+                    <p class="aboutus_text-title">
+                        安心の未来へ。<br />
+                        不動産と相続のスペシャリストが支えます。
+                    </p>
+                    <p class="aboutus_text-body">
+                        複雑な不動産の取引や相続に関するお悩みは、私たちにお任せください。経験豊富な有資格者と専門スタッフが、あなたの大切な財産を守り、最適な解決策をご提案します。<br />
+                        相続手続きや遺産分割のアドバイスから、不動産の売買・管理まで、幅広いサポートを一貫して提供。法律や税金の観点をしっかりと踏まえた上で、お客様一人ひとりの状況に寄り添い、安心して任せられるサービスをお届けします。<br />
+                        「安心」と「信頼」を第一に、あなたの未来を支えるお手伝いをいたします。まずはお気軽にご相談ください。
+                    </p>
+                    <div class="link_box_button">
+                        <a href="./company/index.html" class="left_button">会 社 概 要</a>
+                        <a href="./contact/index.html" class="right_button">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 業務内容 -->
+        <div class="service_wrap">
+            <div class="block-title-main">
+                <h2>業務内容</h2>
+                <div class="img-wrap">
+                    <img src="./img/service.png" alt="" />
+                </div>
+            </div>
+            <div class="service_door_container wrapper">
+                <div id="slider-section">
+                    <div class="service_door_box">
+                        <button class="left-btn btn_animation" onclick="rotate(-1)"></button>
+                        <a id="opt1" href="#" class="option small left">
+                            <p class="service_door_text-top">不動産</p>
+                            <p class="service_door_text-bottom">法律相談</p>
+                        </a>
+                        <a id="opt2" href="#" class="option big">
+                            <p class="service_door_text-top">不動産</p>
+                            <p class="service_door_text-bottom">売買・賃貸</p>
+                        </a>
+                        <a id="opt3" href="#" class="option small right">
+                            <p class="service_door_text-top">相続</p>
+                            <p class="service_door_text-bottom">遺品整理</p>
+                        </a>
+                        <button class="right-btn btn_animation" onclick="rotate(1)"></button>
+                    </div>
+                    <div id="description" class="description">
+                        私たちはお客様のニーズに応じた不動産ソリューションを法律・流通に精通する宅建士が最適なメリットをご提供します。
+                    </div>
+                    <a id="description-link" href="#" class="link-button">
+                        <div class="link-button-box">
+                            <img src="./img/nock-w.svg" alt="" width="35" />
+                            <span>詳しくはこちら</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 業務内容-下部のアイテムBOX -->
+            <div class="service_bottombox wrapper">
+                <div class="service_bottombox-wrap">
+                    <div class="service_bottombox-item">
+                        <div class="service_bottombox-item_logo">
+                            <img src="./img/trade-w.svg" alt="" />
+                        </div>
+                        <p class="service_bottombox-item_title">不動産売買</p>
+                        <p class="service_bottombox-item_body">
+                            不動産売買のプロフェッショナルが、あなたの理想を実現する物件をご提案。スムーズで安心な取引をサポートします。
+                        </p>
+                    </div>
+                </div>
+                <div class="service_bottombox-wrap">
+                    <div class="service_bottombox-item">
+                        <div class="service_bottombox-item_logo">
+                            <img src="./img/appraisal-w.svg" alt="" width="120" />
+                        </div>
+                        <p class="service_bottombox-item_title">不動産査定</p>
+                        <p class="service_bottombox-item_body">
+                            無料で迅速な査定を提供。市場に最適な価格を正確にお伝えし、次のステップへのサポートをいたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="service_bottombox-wrap">
+                    <div class="service_bottombox-item">
+                        <div class="service_bottombox-item_logo">
+                            <img src="./img/brokerage-w.svg" alt="" width="120" />
+                        </div>
+                        <p class="service_bottombox-item_title">各士業仲介</p>
+                        <p class="service_bottombox-item_body">
+                            弁護士、税理士、司法書士など、各士業との連携で、複雑な問題もスムーズに解決。あなたに最適な専門家をご紹介します。
+                        </p>
+                    </div>
+                </div>
+                <div class="service_bottombox-wrap">
+                    <div class="service_bottombox-item">
+                        <div class="service_bottombox-item_logo">
+                            <img src="./img/Interpreter-w.svg" alt="" width="120" />
+                        </div>
+                        <p class="service_bottombox-item_title">会说中文<span>/中国語対応</span></p>
+                        <p class="service_bottombox-item_body">
+                            我们提供中文服务，帮助您轻松解决不动产相关的各种问题，让沟通更顺畅，解决更高效。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- サポート -->
+        <div class="support_wrap">
+            <div class="block-title-main">
+                <h2>サポート体制</h2>
+                <div class="img-wrap">
+                    <img src="./img/support.png" alt="" />
+                </div>
+            </div>
+            <div class="support_box wrapper">
+                <div class="support_box-left">
+                    <div class="support_box-left-circlebox">
+                        <div class="support_box-left-center-circlebox">
+                            <div class="support_box-centercircle1">
+                                <img class="support_box-logo" src="./img/logo-black.svg" alt="" width="75" />
+                            </div>
+                            <div class="support_box-centercircle2"></div>
+                            <div class="support_box-centercircle3"></div>
+                        </div>
+                        <div class="support_box-left-action-circlebox">
+                            <div class="support_box-leftcircle1">
+                                <p>許認可<br />申請書類</p>
+                            </div>
+                            <div class="support_box-leftcircle2">
+                                <p>税務代理</p>
+                            </div>
+                            <div class="support_box-leftcircle3">
+                                <p>契約書作成</p>
+                            </div>
+                        </div>
+                        <img class="support_box-leftcircle-back" src="./img/circle-outline.png" alt="" />
+                    </div>
+                </div>
+                <div class="support_box-right">
+                    <div class="support_box-right-textbox">
+                        <div class="support_box-right-textbody">
+                            <p>ご要望をお聞かせ下さい。契約成立が終了ではありません。</p>
+                        </div>
+                        <div class="support_box-right-texttitle">
+                            <p>成約後もご要望に合わせて総合的にサポートします</p>
+                        </div>
+                        <div class="support_box-right-textbody">
+                            <p>
+                                税理士事務所、行政書士事務所などの様々な士業と提携し、物件購入後の許可取り、申請等お客様が希望する最終ゴールまでの事柄をワンストップでサポートが可能です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 中国語対応 -->
+        <div class="language_wrap">
+            <div class="block-title-main">
+                <h2>中国語対応 / 有中文版</h2>
+                <div class="img-wrap">
+                    <img src="./img/language.png" alt="" />
+                </div>
+            </div>
+            <div class="language_box wrapper">
+                <div class="language_box-left">
+                    <img class="language_box-img" src="./img/men.jpg" alt="" />
+                </div>
+                <div class="language_box-right">
+                    <p class="language_text-title">提供会讲中文的工作人员。</p>
+                    <p class="language_text-body">
+                        公司有会讲中文的员工。 如果您有任何有关日本房地产的问题， <br />请随时与我们联系。
+                    </p>
+                    <div class="link_box_button">
+                        <a href="./renovation/index.html" class="left_button">我们能做什么</a>
+                        <a href="./contact-CN/index.html" class="right_button">询问</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer wrapper">
+                <div class="footer-box_top">
+                    <h2><img class="footer-logo" src="./img/logo-black-name.svg" alt="" /></h2>
+                    <nav class="footer-box_text">
+                        <ul class="footer-box_body-top">
+                            <li><a href="./company/index.html">会社概要</a></li>
+                            <li><a href="./renovation/index.html">賃貸物件一覧</a></li>
+                            <li><a href="./renovation/index.html">分譲物件一覧</a></li>
+                            <li><a href="./contact/index.html">お問い合わせ</a></li>
+                        </ul>
+                        <ul class="footer-box_body-bottom">
+                            <li><a href="./renovation/index.html">相続・遺品整理</a></li>
+                            <li><a href="./renovation/index.html">不動産管理・運用</a></li>
+                            <li><a href="./renovation/index.html">法律相談・仲介</a></li>
+                            <li><a href="./contact-CN/index.html">中国語対応 / 中文咨询</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-box_bottom">
+                    <p>Copyright © Napure Co.,Ltd. All Rights Reserved.</p>
+                    <div class="footer_nav-item">
+                        <a href="./privacypolicy/index.html" target="_blank" rel="noopener noreferrer"
+                            >プライバシーポリシー</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
